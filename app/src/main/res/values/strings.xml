@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TymeX GitHub Users</string>
+    <string name="github_users">GitHub Users</string>
+    <string name="user_detail">User Detail</string>
+    <string name="follower">Follower</string>
+    <string name="following">Following</string>
+    <string name="blog">Blog</string>
+    <string name="error_s">Error: %1$s</string>
+    <string name="retry">Retry</string>
+    <string name="unknown_error">Unknown Error</string>
+</resources>
