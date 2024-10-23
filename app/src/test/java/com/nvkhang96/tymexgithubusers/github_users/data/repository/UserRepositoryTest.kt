@@ -37,7 +37,7 @@ class UserRepositoryTest {
     }
 
     @Test
-    fun `getUserDetail should return cached user and then update with remote data`() = runTest {
+    fun `getUserDetail should return cached user and then update with remote data on success`() = runTest {
 
         val username = "username"
         val cachedUserEntity = UserEntity(username = username, location = "Cached User")
@@ -59,7 +59,7 @@ class UserRepositoryTest {
     }
 
     @Test
-    fun `getUserDetail should return cached user and then error when API call fails`() = runTest {
+    fun `getUserDetail should return cached user and then error on calling API fails`() = runTest {
 
         val username = "username"
         val cachedUserEntity = UserEntity(username = username, location = "Cached User")

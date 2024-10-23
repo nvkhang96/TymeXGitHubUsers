@@ -14,7 +14,11 @@ import kotlinx.serialization.Serializable
 object UserList
 
 @Serializable
-data class UserDetail(val username: String)
+data class UserDetail(val username: String) {
+    companion object {
+        const val ARG_USERNAME = "username"
+    }
+}
 
 @OptIn(ExperimentalSharedTransitionApi::class)
 @Composable
@@ -31,7 +35,7 @@ fun GitHubUsersNavHost(navController: NavHostController) {
                 )
             }
             composable<UserDetail> { backStackEntry ->
-                val username = backStackEntry.arguments?.getString("username") ?: ""
+                val username = backStackEntry.arguments?.getString(UserDetail.ARG_USERNAME) ?: ""
                 UserDetailScreen(
                     username = username,
                     onNavigateBack = {

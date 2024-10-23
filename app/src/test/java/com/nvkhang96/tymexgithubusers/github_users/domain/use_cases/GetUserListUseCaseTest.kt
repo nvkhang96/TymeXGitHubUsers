@@ -27,7 +27,7 @@ class GetUserListUseCaseTest {
     }
 
     @Test
-    fun `When success, returns paging data`() = runTest {
+    fun `invoke should return paging data on success`() = runTest {
 
         val expectation = PagingData.from(DomainMockUtil.users)
         coEvery {
@@ -41,7 +41,7 @@ class GetUserListUseCaseTest {
     }
 
     @Test
-    fun `When fail, throw exception`() = runTest {
+    fun `invoke should throw exception on failure`() = runTest {
 
         val exception = DomainMockUtil.exception
         coEvery {
